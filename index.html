@@ -24,9 +24,24 @@
                     <a href="resultados.html">Resultados</a>
                 </nav>
                 <a href="demonstracao.html" class="cta-button cta-button-small">Testar Grátis</a>
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="demonstracao.html">Demonstração</a>
+        <a href="resultados.html">Resultados</a>
+        <a href="https://wa.me/5561991491620?text=Olá! Gostaria de saber mais sobre o Nexus AI" class="cta-button">Falar no WhatsApp</a>
+    </nav>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -634,7 +649,7 @@
                         <span class="faq-icon"><i class="fas fa-plus"></i></span>
                     </div>
                     <div class="faq-answer" style="display: none;">
-                        A implementação completa leva de 3 a 5 dias úteis. Isso inclui: personalização do script com informações da sua clínica, integração com sistemas, treinamento do Nexus com suas objeções e diferenciais, e período de testes. Você começa a ver resultados já na primeira semana.
+                        A implementação completa leva até 20 dias úteis. Isso inclui: personalização do script com informações da sua clínica, integração com sistemas, treinamento do Nexus com suas objeções e diferenciais, e período de testes. Você começa a ver resultados já nas primeiras semanas.
                     </div>
                 </div>
 
@@ -682,10 +697,10 @@
                 </div>
                 <div class="cta-final-buttons">
                     <a href="https://thaispaivacaliandra-chatbot-demo-nexus.hf.space/" target="_blank" class="cta-button cta-button-large">Começar Teste Grátis Agora</a>
-                    <a href="mailto:contato@nexusai.com.br" class="cta-button cta-button-secondary cta-button-large">Falar com Especialista</a>
+                    <a href="https://wa.me/5561991491620?text=Olá! Gostaria de falar com um especialista sobre o Nexus AI" target="_blank" class="cta-button cta-button-secondary cta-button-large"><i class="fab fa-whatsapp"></i> Falar com Especialista</a>
                 </div>
                 <div class="cta-guarantee">
-                    <p><i class="fas fa-check"></i> Sem cartão de crédito • <i class="fas fa-check"></i> Implementação em 5 dias • <i class="fas fa-check"></i> Cancele quando quiser</p>
+                    <p><i class="fas fa-check"></i> Sem cartão de crédito • <i class="fas fa-check"></i> Implementação em 20 dias • <i class="fas fa-check"></i> Cancele quando quiser</p>
                 </div>
             </div>
         </div>
@@ -705,7 +720,28 @@
         </div>
     </footer>
 
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5561991491620?text=Olá! Gostaria de saber mais sobre o Nexus AI" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Fale conosco!</span>
+    </a>
+
     <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const mobileNavOverlay = document.querySelector('.mobile-nav-overlay');
+
+        function toggleMobileMenu() {
+            mobileMenuToggle.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            mobileNavOverlay.classList.toggle('active');
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        }
+
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+        mobileNavOverlay.addEventListener('click', toggleMobileMenu);
+
         // FAQ Toggle
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {

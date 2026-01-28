@@ -307,9 +307,24 @@
                     <a href="resultados.html" class="active">Resultados</a>
                 </nav>
                 <a href="demonstracao.html" class="cta-button cta-button-small">Testar Grátis</a>
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="demonstracao.html">Demonstração</a>
+        <a href="resultados.html" class="active">Resultados</a>
+        <a href="https://wa.me/5561991491620?text=Olá! Gostaria de saber mais sobre o Nexus AI" class="cta-button">Falar no WhatsApp</a>
+    </nav>
 
     <!-- Hero Section -->
     <section class="page-hero">
@@ -592,10 +607,10 @@
                 <p>Comece agora com 14 dias grátis e veja na prática como o Nexus AI pode transformar seus resultados.</p>
                 <div class="cta-final-buttons">
                     <a href="demonstracao.html" class="cta-button cta-button-white"><i class="fas fa-play-circle"></i> Testar Grátis por 14 Dias</a>
-                    <a href="mailto:contato@nexusai.com.br" class="cta-button cta-button-outline"><i class="fas fa-phone"></i> Falar com Especialista</a>
+                    <a href="https://wa.me/5561991491620?text=Olá! Vi os resultados e gostaria de saber mais sobre o Nexus AI" target="_blank" class="cta-button cta-button-outline"><i class="fab fa-whatsapp"></i> Falar com Especialista</a>
                 </div>
                 <div class="cta-guarantee">
-                    <p><i class="fas fa-check"></i> Sem cartão de crédito • <i class="fas fa-check"></i> Implementação em 5 dias • <i class="fas fa-check"></i> Cancele quando quiser</p>
+                    <p><i class="fas fa-check"></i> Sem cartão de crédito • <i class="fas fa-check"></i> Implementação em 20 dias • <i class="fas fa-check"></i> Cancele quando quiser</p>
                 </div>
             </div>
         </div>
@@ -614,5 +629,28 @@
             </div>
         </div>
     </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5561991491620?text=Olá! Gostaria de saber mais sobre o Nexus AI" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Fale conosco!</span>
+    </a>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const mobileNavOverlay = document.querySelector('.mobile-nav-overlay');
+
+        function toggleMobileMenu() {
+            mobileMenuToggle.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            mobileNavOverlay.classList.toggle('active');
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        }
+
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+        mobileNavOverlay.addEventListener('click', toggleMobileMenu);
+    </script>
 </body>
 </html>

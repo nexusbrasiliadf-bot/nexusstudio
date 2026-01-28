@@ -24,9 +24,24 @@
                     <a href="resultados.html">Resultados</a>
                 </nav>
                 <a href="demonstracao.html" class="cta-button cta-button-small">Testar Grátis</a>
+                <button class="mobile-menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay"></div>
+    <nav class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="sobre.html" class="active">Sobre</a>
+        <a href="demonstracao.html">Demonstração</a>
+        <a href="resultados.html">Resultados</a>
+        <a href="https://wa.me/5561991491620?text=Olá! Gostaria de saber mais sobre o Nexus AI" class="cta-button">Falar no WhatsApp</a>
+    </nav>
 
     <!-- Hero Section -->
     <section class="hero-about">
@@ -246,7 +261,7 @@
 
                 <div class="differential-card">
                     <div class="differential-number">03</div>
-                    <h3>Implementação em 5 Dias</h3>
+                    <h3>Implementação em 20 Dias</h3>
                     <p>Sem projetos que duram meses. Em uma semana sua IA está funcionando, integrada com seus sistemas e convertendo leads enquanto você foca no presencial.</p>
                 </div>
 
@@ -298,5 +313,28 @@
             </div>
         </div>
     </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5561991491620?text=Olá! Gostaria de saber mais sobre o Nexus AI" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Fale conosco!</span>
+    </a>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const mobileNavOverlay = document.querySelector('.mobile-nav-overlay');
+
+        function toggleMobileMenu() {
+            mobileMenuToggle.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            mobileNavOverlay.classList.toggle('active');
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        }
+
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+        mobileNavOverlay.addEventListener('click', toggleMobileMenu);
+    </script>
 </body>
 </html>
