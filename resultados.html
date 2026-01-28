@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados - Nexus AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .metrics-highlight {
+            padding: 80px 0;
+            background: var(--bg-white);
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .metric-card {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.05), rgba(139, 92, 246, 0.05));
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(139, 92, 246, 0.15);
+        }
+
+        .metric-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #FF6B35, #8B5CF6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 24px;
+        }
+
+        .metric-value {
+            font-size: 48px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #FF6B35, #FFC947, #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+
+        .metric-label {
+            font-size: 16px;
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .metric-description {
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+
+        .case-studies {
+            padding: 100px 0;
+            background: var(--bg-light);
+        }
+
+        .case-study-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+        }
+
+        .case-study-header {
+            background: linear-gradient(135deg, #000000, #1a1a2e);
+            padding: 40px;
+            color: white;
+        }
+
+        .case-study-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #FF6B35, #8B5CF6);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .case-study-header h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .case-study-header p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+        }
+
+        .case-study-content {
+            padding: 40px;
+        }
+
+        .case-study-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .case-study-before, .case-study-after {
+            padding: 30px;
+            border-radius: 16px;
+        }
+
+        .case-study-before {
+            background: rgba(239, 68, 68, 0.05);
+            border: 2px solid rgba(239, 68, 68, 0.2);
+        }
+
+        .case-study-after {
+            background: rgba(16, 185, 129, 0.05);
+            border: 2px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .case-study-before h4, .case-study-after h4 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .case-study-before h4 {
+            color: #DC2626;
+        }
+
+        .case-study-after h4 {
+            color: #10B981;
+        }
+
+        .case-metric {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .case-metric:last-child {
+            border-bottom: none;
+        }
+
+        .case-metric-label {
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        .case-metric-value {
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .case-study-before .case-metric-value {
+            color: #DC2626;
+        }
+
+        .case-study-after .case-metric-value {
+            color: #10B981;
+        }
+
+        .case-study-quote {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 16px;
+            margin-top: 30px;
+            border-left: 4px solid var(--accent-purple);
+        }
+
+        .case-study-quote p {
+            font-size: 18px;
+            font-style: italic;
+            color: var(--text-dark);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .case-study-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .case-study-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #FF6B35, #8B5CF6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+        }
+
+        .case-study-author-info h5 {
+            font-size: 15px;
+            color: var(--text-dark);
+        }
+
+        .case-study-author-info span {
+            font-size: 13px;
+            color: var(--text-gray);
+        }
+
+        .results-summary {
+            padding: 80px 0;
+            background: #000000;
+            color: white;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .summary-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .summary-value {
+            font-size: 64px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #FF6B35, #FFC947, #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        .summary-label {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        @media (max-width: 968px) {
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .case-study-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .metric-value {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="imgs/logo_hero.svg" alt="Nexus AI Logo">
+                </a>
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="demonstracao.html">Demonstração</a>
+                    <a href="resultados.html" class="active">Resultados</a>
+                </nav>
+                <a href="demonstracao.html" class="cta-button cta-button-small">Testar Grátis</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1><i class="fas fa-chart-line"></i> Resultados Comprovados</h1>
+                <p>Números reais de clínicas que implementaram o Nexus AI e transformaram sua operação de atendimento e conversão de leads.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics Highlight -->
+    <section class="metrics-highlight">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-trophy"></i> Média Geral</span>
+                <h2>Resultados médios dos nossos clientes</h2>
+                <p>Dados agregados de mais de 127 clínicas usando o Nexus AI</p>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fas fa-percentage"></i></div>
+                    <div class="metric-value">+245%</div>
+                    <div class="metric-label">Aumento em Conversões</div>
+                    <div class="metric-description">Taxa média de melhoria nas conversões de leads</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fas fa-user-check"></i></div>
+                    <div class="metric-value">-60%</div>
+                    <div class="metric-label">Redução de No-shows</div>
+                    <div class="metric-description">Menos faltas com confirmações automáticas</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fas fa-clock"></i></div>
+                    <div class="metric-value">30s</div>
+                    <div class="metric-label">Tempo de Resposta</div>
+                    <div class="metric-description">Média de tempo para primeira resposta</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fas fa-coins"></i></div>
+                    <div class="metric-value">3.2x</div>
+                    <div class="metric-label">ROI Médio</div>
+                    <div class="metric-description">Retorno sobre investimento em 90 dias</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="case-studies">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-file-alt"></i> Cases de Sucesso</span>
+                <h2>Histórias reais de transformação</h2>
+                <p>Veja como diferentes clínicas alcançaram resultados extraordinários</p>
+            </div>
+
+            <!-- Case Study 1 -->
+            <div class="case-study-card">
+                <div class="case-study-header">
+                    <span class="case-study-badge"><i class="fas fa-heartbeat"></i> Cardiologia</span>
+                    <h3>Clínica Cardio Saúde</h3>
+                    <p>São Paulo, SP • 3 médicos • 2.500 leads/mês</p>
+                </div>
+                <div class="case-study-content">
+                    <div class="case-study-grid">
+                        <div class="case-study-before">
+                            <h4><i class="fas fa-times-circle"></i> Antes do Nexus AI</h4>
+                            <div class="case-metric">
+                                <span class="case-metric-label">Taxa de conversão</span>
+                                <span class="case-metric-value">28%</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="case-metric-label">Tempo de resposta</span>
+                                <span class="case-metric-value">4-8 horas</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="case-metric-label">Atendimento noturno</span>
+                                <span class="case-metric-value">0%</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="case-metric-label">Script completo</span>
+                                <span class="case-metric-value">~40%</span>
+                            </div>
+                        </div>
+                        <div class="case-study-after">
+                            <h4><i class="fas fa-check-circle"></i> Depois do Nexus AI</h4>
+                            <div class="case-metric">
+                                <span class="case-metric-label">Taxa de conversão</span>
+                                <span class="case-metric-value">71%</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="case-metric-label">Tempo de resposta</span>
+                                <span class="case-metric-value">30 segundos</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="case-metric-label">Atendimento noturno</span>
+                                <span class="case-metric-value">100%</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="case-metric-label">Script completo</span>
+                                <span class="case-metric-value">100%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-study-quote">
+                        <p>"Minha secretária estava enlouquecendo tentando atender presencial e WhatsApp ao mesmo tempo. Agora ela foca 100% em quem está aqui, e o Nexus converte melhor do que ela conseguia."</p>
+                        <div class="case-study-author">
+                            <div class="case-study-avatar">MC</div>
+                            <div class="case-study-author-info">
+                                <h5>Dra. Maria Clara Oliveira</h5>
+                                <span>Cardiologista • Diretora Clínica</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 2 -->
+            <div class="case-study-card">
+                <div class="case-study-header">
+                    <span class="case-study-badge"><i class="fas fa-bone"></i> Ortopedia</span>
+                    <h3>Clínica Ortopédica Prime</h3>
+                    <p>Rio de Janeiro, RJ • 5 médicos • 4.000 leads/mês</p>
+                </div>
+                <div class="case-study-content">
+                    <div class="case-study-grid">
+                        <div class="case-study-before">
+                            <h4><i class="fas fa-times-circle"></i> Antes do Nexus AI</h4>
+                            <div class="case-metric">
+                                <span class="case-metric-label">Taxa de conversão</span>
+                                <span class="case-metric-value">22%</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="case-metric-label">Leads perdidos/mês</span>
+                                <span class="case-metric-value">~800</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="case-metric-label">Satisfação da equipe</span>
+                                <span class="case-metric-value">Baixa</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="case-metric-label">Receita mensal</span>
+                                <span class="case-metric-value">R$ 180k</span>
+                            </div>
+                        </div>
+                        <div class="case-study-after">
+                            <h4><i class="fas fa-check-circle"></i> Depois do Nexus AI</h4>
+                            <div class="case-metric">
+                                <span class="case-metric-label">Taxa de conversão</span>
+                                <span class="case-metric-value">68%</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="case-metric-label">Leads perdidos/mês</span>
+                                <span class="case-metric-value">~50</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="case-metric-label">Satisfação da equipe</span>
+                                <span class="case-metric-value">+95%</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="case-metric-label">Receita mensal</span>
+                                <span class="case-metric-value">R$ 285k</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-study-quote">
+                        <p>"Minha equipe agradeceu! Não precisam mais ficar divididas entre recepção e WhatsApp. O atendimento presencial melhorou muito, e as conversões online triplicaram. Win-win total."</p>
+                        <div class="case-study-author">
+                            <div class="case-study-avatar">AF</div>
+                            <div class="case-study-author-info">
+                                <h5>Dra. Ana Flávia Costa</h5>
+                                <span>Ortopedista • Sócia-fundadora</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 3 -->
+            <div class="case-study-card">
+                <div class="case-study-header">
+                    <span class="case-study-badge"><i class="fas fa-spa"></i> Dermatologia</span>
+                    <h3>Dermatologia Avançada</h3>
+                    <p>Belo Horizonte, MG • 2 médicos • 1.800 leads/mês</p>
+                </div>
+                <div class="case-study-content">
+                    <div class="case-study-grid">
+                        <div class="case-study-before">
+                            <h4><i class="fas fa-times-circle"></i> Antes do Nexus AI</h4>
+                            <div class="case-metric">
+                                <span class="case-metric-label">Taxa de conversão</span>
+                                <span class="case-metric-value">35%</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="case-metric-label">Leads fora do horário</span>
+                                <span class="case-metric-value">Perdidos (67%)</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="case-metric-label">Agendamentos/mês</span>
+                                <span class="case-metric-value">630</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="case-metric-label">No-show rate</span>
+                                <span class="case-metric-value">25%</span>
+                            </div>
+                        </div>
+                        <div class="case-study-after">
+                            <h4><i class="fas fa-check-circle"></i> Depois do Nexus AI</h4>
+                            <div class="case-metric">
+                                <span class="case-metric-label">Taxa de conversão</span>
+                                <span class="case-metric-value">81%</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="case-metric-label">Leads fora do horário</span>
+                                <span class="case-metric-value">100% atendidos</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="case-metric-label">Agendamentos/mês</span>
+                                <span class="case-metric-value">1.458</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="case-metric-label">No-show rate</span>
+                                <span class="case-metric-value">8%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-study-quote">
+                        <p>"Lead que chega 21h é convertido na mesma hora. Antes a secretária só via no dia seguinte e a gente já tinha perdido. Agora capturamos 100% dos leads, não importa o horário."</p>
+                        <div class="case-study-author">
+                            <div class="case-study-avatar">PC</div>
+                            <div class="case-study-author-info">
+                                <h5>Dr. Paulo Cardoso</h5>
+                                <span>Dermatologista • Diretor Médico</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Summary -->
+    <section class="results-summary">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" style="background: rgba(255, 255, 255, 0.2); color: white;"><i class="fas fa-award"></i> Impacto Total</span>
+                <h2 style="color: white;">O que já entregamos para nossos clientes</h2>
+                <p style="color: rgba(255, 255, 255, 0.9);">Números acumulados desde o lançamento do Nexus AI</p>
+            </div>
+
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <div class="summary-value">127+</div>
+                    <div class="summary-label">Clínicas atendidas</div>
+                </div>
+
+                <div class="summary-card">
+                    <div class="summary-value">180k+</div>
+                    <div class="summary-label">Consultas agendadas</div>
+                </div>
+
+                <div class="summary-card">
+                    <div class="summary-value">R$ 5.6M</div>
+                    <div class="summary-label">Receita gerada para clientes</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-final">
+        <div class="container">
+            <div class="cta-final-content">
+                <h2>Sua clínica pode ser o próximo case de sucesso</h2>
+                <p>Comece agora com 14 dias grátis e veja na prática como o Nexus AI pode transformar seus resultados.</p>
+                <div class="cta-final-buttons">
+                    <a href="demonstracao.html" class="cta-button cta-button-white"><i class="fas fa-play-circle"></i> Testar Grátis por 14 Dias</a>
+                    <a href="mailto:contato@nexusai.com.br" class="cta-button cta-button-outline"><i class="fas fa-phone"></i> Falar com Especialista</a>
+                </div>
+                <div class="cta-guarantee">
+                    <p><i class="fas fa-check"></i> Sem cartão de crédito • <i class="fas fa-check"></i> Implementação em 5 dias • <i class="fas fa-check"></i> Cancele quando quiser</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Nexus AI - Desenvolvido por <a href="https://thaispaivacaliandra.netlify.app" target="_blank">Thais Paiva</a></p>
+            <p>Atendimento inteligente para clínicas médicas</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="demonstracao.html">Demonstração</a>
+                <a href="resultados.html">Resultados</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

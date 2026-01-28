@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus AI - Atendimento Inteligente para Clínicas Médicas</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="imgs/logo_hero.svg" alt="Nexus AI Logo">
+                </a>
+                <nav class="nav-links">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="demonstracao.html">Demonstração</a>
+                    <a href="resultados.html">Resultados</a>
+                </nav>
+                <a href="demonstracao.html" class="cta-button cta-button-small">Testar Grátis</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Transforme leads em <span class="highlight">pacientes agendados</span> enquanto sua equipe brilha no presencial</h1>
+                    <p>Imagine: sua secretária focada 100% em quem está na recepção, oferecendo atendimento premium. Enquanto isso, cada lead que chega pelo WhatsApp ou site recebe seu script de vendas executado perfeitamente por uma IA — que nunca cansa, nunca esquece etapas e converte 24/7.</p>
+                    <div class="hero-cta">
+                        <a href="demonstracao.html" class="cta-button cta-button-large">Testar Gratuitamente por 14 Dias</a>
+                        <a href="resultados.html" class="cta-button cta-button-secondary cta-button-large">Ver Resultados Reais</a>
+                    </div>
+                    <div class="social-proof-mini">
+                        <span class="proof-item"><i class="fas fa-star"></i> 4.9/5 (127 clínicas)</span>
+                        <span class="proof-item"><i class="fas fa-check-circle"></i> +15.000 consultas agendadas/mês</span>
+                    </div>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Dos leads seguem o script de vendas completo</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Conversão consistente, sem variação humana</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3x</span>
+                        <span class="stat-label">Mais agendamentos convertidos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">O Problema Real</span>
+                <h2>Você já sabe: secretária sobrecarregada = dinheiro na mesa</h2>
+                <p>O problema não é falta de leads. É o que acontece quando eles chegam.</p>
+            </div>
+
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon"><i class="fas fa-balance-scale"></i></div>
+                    <h3>Atendimento presencial OU conversão online?</h3>
+                    <p>Ela escolhe: atender quem está na frente dela ou responder o WhatsApp que não para. Resultado? Nenhum dos dois recebe a atenção que merece. Lead espera 40 minutos, desiste e agenda na clínica que respondeu em 2.</p>
+                    <div class="problem-cost"><i class="fas fa-heart-broken"></i> A escolha impossível que mata conversões</div>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon"><i class="fas fa-clipboard-list"></i></div>
+                    <h3>"Só mais um horário..." (lá se vai o script)</h3>
+                    <p>Na segunda-feira ela segue o script direitinho: qualifica, trata objeções, destaca diferenciais. Na sexta às 17h? "Quer agendar? Terça às 15h tem vaga". Sem perguntas, sem qualificação, sem conversão.</p>
+                    <div class="problem-cost"><i class="fas fa-chart-line-down"></i> Script vira robô mecânico em 3 dias</div>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon"><i class="fas fa-theater-masks"></i></div>
+                    <h3>Cada lead recebe um atendimento diferente</h3>
+                    <p>Segunda de manhã: motivada, converte bem. Quarta pós-almoço: corrida, converte menos. Sexta tarde: exausta, só marca horário. O problema? Você paga anúncio pro lead chegar, mas a conversão vira loteria.</p>
+                    <div class="problem-cost"><i class="fas fa-dice"></i> ROI imprevisível por variação humana</div>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon"><i class="fas fa-moon"></i></div>
+                    <h3>Horário nobre = clínica fechada</h3>
+                    <p>67% dos seus leads chegam depois das 18h ou fim de semana — quando as pessoas têm tempo livre. Sua secretária: em casa. Lead: agenda com quem respondeu. Você: perdeu a venda dormindo.</p>
+                    <div class="problem-cost"><i class="fas fa-money-bill-wave"></i> Maior volume de leads no pior horário possível</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="demonstracao" class="solution-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">A Solução</span>
+                <h2>Nexus AI: O vendedor que executa seu script perfeitamente, toda vez</h2>
+                <p>Atendimento padronizado, conversão consistente e integração direta com sua agenda — sem sobrecarregar sua equipe</p>
+            </div>
+
+            <div class="solution-content">
+                <div class="solution-demo">
+                    <div class="demo-header">
+                        <div class="demo-dot"></div>
+                        <div class="demo-dot"></div>
+                        <div class="demo-dot"></div>
+                    </div>
+                    <div class="chat-message ai">
+                        <div class="chat-label">NEXUS AI</div>
+                        <div class="chat-text">Olá! 👋 Seja bem-vindo à Clínica Vida Nova. Vi que você se interessou pela nossa consulta de cardiologia. Posso te ajudar a agendar?</div>
+                    </div>
+                    <div class="chat-message user">
+                        <div class="chat-label">LEAD</div>
+                        <div class="chat-text">Queria saber o preço primeiro</div>
+                    </div>
+                    <div class="chat-message ai">
+                        <div class="chat-label">NEXUS AI</div>
+                        <div class="chat-text">Claro! A consulta particular é R$ 350. Trabalhamos com vários convênios também. Você tem plano de saúde ou seria particular?</div>
+                    </div>
+                    <div class="chat-message user">
+                        <div class="chat-label">LEAD</div>
+                        <div class="chat-text">Tenho Unimed. Vocês atendem?</div>
+                    </div>
+                    <div class="chat-message ai">
+                        <div class="chat-label">NEXUS AI</div>
+                        <div class="chat-text">Sim! Atendemos Unimed. Perfeito! O Dr. Carlos Silva é especialista com 15 anos de experiência e tem ótimas avaliações. É a primeira vez que você consulta com cardiologista?</div>
+                    </div>
+                    <div class="chat-message user">
+                        <div class="chat-label">LEAD</div>
+                        <div class="chat-text">Sim, meu médico pediu check-up do coração</div>
+                    </div>
+                    <div class="chat-message ai">
+                        <div class="chat-label">NEXUS AI</div>
+                        <div class="chat-text">Entendi! Nesse caso é importante não adiar. Tenho horários esta semana: Terça 14h, Quarta 10h ou Sexta 16h. Qual funciona melhor pra você?</div>
+                    </div>
+                </div>
+
+                <div class="solution-features">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-file-alt"></i></div>
+                        <div class="feature-content">
+                            <h3>Executa seu script de vendas 100% das vezes</h3>
+                            <p>Você cria o script perfeito uma vez, e o Nexus AI executa ele em todos os atendimentos — sem pular etapas, sem esquecer perguntas essenciais, sem variação de humor.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-bullseye"></i></div>
+                        <div class="feature-content">
+                            <h3>Trata objeções como seu melhor vendedor</h3>
+                            <p>Preço alto? Não conhece o médico? Quer pensar? O Nexus AI está treinado para contornar objeções e manter o lead engajado até o agendamento.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-link"></i></div>
+                        <div class="feature-content">
+                            <h3>Integrado direto com sua agenda</h3>
+                            <p>Consulta horários disponíveis em tempo real e confirma o agendamento automaticamente — sem WhatsApp pra frente e pra trás, sem planilhas, sem retrabalho.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-sparkles"></i></div>
+                        <div class="feature-content">
+                            <h3>Libera sua secretária para o presencial</h3>
+                            <p>Enquanto o Nexus AI cuida da conversão online, sua equipe pode focar 100% em quem está na recepção — oferecendo experiência de excelência para todos.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                        <div class="feature-content">
+                            <h3>Resposta instantânea = mais conversões</h3>
+                            <p>Lead chega às 22h? Final de semana? Feriado? Nexus responde em 30 segundos e converte antes da concorrência acordar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section class="how-it-works-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Processo</span>
+                <h2>Como funciona na prática?</h2>
+                <p>Do setup à conversão: veja como é simples implementar o Nexus AI na sua clínica</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <h3>Definimos seu script de vendas</h3>
+                        <p>Nossa equipe trabalha com você para mapear seu processo ideal: como apresentar a clínica, tratar objeções de preço, destacar diferenciais e conduzir ao agendamento. Você aprova tudo antes de ativar.</p>
+                        <div class="timeline-duration"><i class="fas fa-clock"></i> 1-2 dias</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <h3>Treinamos a IA com sua clínica</h3>
+                        <p>Alimentamos o Nexus com informações sobre procedimentos, convênios, valores, especialidades, localização e políticas. Ele aprende o tom de voz da sua marca e como responder cada tipo de pergunta.</p>
+                        <div class="timeline-duration"><i class="fas fa-clock"></i> 1 dia</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <h3>Integramos com sua agenda</h3>
+                        <p>Conectamos o Nexus ao seu sistema de gestão (Clinux, iClinic, MedPlus, Google Calendar, etc). A partir daqui, ele consulta horários disponíveis e agenda automaticamente em tempo real.</p>
+                        <div class="timeline-duration"><i class="fas fa-clock"></i> 1 dia</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-content">
+                        <h3>Ativamos e começam as conversões!</h3>
+                        <p>Nexus entra em operação no seu WhatsApp, site ou redes sociais. Ele atende, qualifica e agenda 24/7. Você acompanha tudo em tempo real no dashboard e pode ajustar quando quiser.</p>
+                        <div class="timeline-duration"><i class="fas fa-rocket"></i> A partir do dia 5</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="demonstracao.html" class="cta-button cta-button-large">Começar Implementação</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot vs IA Section -->
+    <section class="chatbot-vs-ia-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Tecnologia</span>
+                <h2>Por que Nexus AI é diferente de um chatbot comum?</h2>
+                <p>Não é só automação — é inteligência artificial que pensa, aprende e converte</p>
+            </div>
+
+            <div class="comparison-cards">
+                <div class="comparison-card-item chatbot-card">
+                    <span class="comparison-card-icon"><i class="fas fa-robot"></i></span>
+                    <h3>Chatbot Tradicional</h3>
+                    <ul class="comparison-list">
+                        <li><i class="fas fa-times" style="color: #EF4444;"></i> Segue fluxos fixos e menus</li>
+                        <li><i class="fas fa-times" style="color: #EF4444;"></i> Só entende comandos específicos</li>
+                        <li><i class="fas fa-times" style="color: #EF4444;"></i> Frustra quando o lead sai do roteiro</li>
+                        <li><i class="fas fa-times" style="color: #EF4444;"></i> Parece robótico e impessoal</li>
+                        <li><i class="fas fa-times" style="color: #EF4444;"></i> Não aprende com as conversas</li>
+                    </ul>
+                    <div class="example-box bad-example">
+                        <strong>Exemplo:</strong>
+                        <p>Lead: "Aceita meu plano?"<br>Bot: "Desculpe, não entendi. Digite 1 para convênios..."</p>
+                    </div>
+                </div>
+
+                <div class="comparison-card-item ai-card">
+                    <span class="comparison-card-icon"><i class="fas fa-brain"></i></span>
+                    <h3>Nexus AI (Agente Inteligente)</h3>
+                    <ul class="comparison-list">
+                        <li><i class="fas fa-check" style="color: #10B981;"></i> Entende linguagem natural</li>
+                        <li><i class="fas fa-check" style="color: #10B981;"></i> Interpreta intenção, não apenas palavras</li>
+                        <li><i class="fas fa-check" style="color: #10B981;"></i> Adapta a conversa ao contexto</li>
+                        <li><i class="fas fa-check" style="color: #10B981;"></i> Conversa natural e humanizada</li>
+                        <li><i class="fas fa-check" style="color: #10B981;"></i> Melhora continuamente</li>
+                    </ul>
+                    <div class="example-box good-example">
+                        <strong>Exemplo:</strong>
+                        <p>Lead: "Aceita meu plano?"<br>Nexus: "Sim! Trabalhamos com os principais convênios. Qual é o seu?"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases by Specialty -->
+    <section class="use-cases-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Aplicações</span>
+                <h2>Funciona para qualquer especialidade médica</h2>
+                <p>Veja exemplos reais de como o Nexus AI atende diferentes áreas da saúde</p>
+            </div>
+
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <span class="use-case-icon"><i class="fas fa-heartbeat"></i></span>
+                    <h3>Cardiologia</h3>
+                    <p><strong>Cenário:</strong> Lead quer check-up cardíaco</p>
+                    <p><strong>Nexus:</strong> Identifica urgência, explica exames inclusos, destaca experiência do médico e agenda para a semana mais próxima possível.</p>
+                    <div class="use-case-result"><i class="fas fa-chart-line"></i> Resultado: 73% de conversão em consultas preventivas</div>
+                </div>
+
+                <div class="use-case-card">
+                    <span class="use-case-icon"><i class="fas fa-bone"></i></span>
+                    <h3>Ortopedia</h3>
+                    <p><strong>Cenário:</strong> Paciente com dor no joelho</p>
+                    <p><strong>Nexus:</strong> Faz triagem inicial (quando começou, intensidade), sugere especialista adequado (trauma, esporte, coluna) e agenda consulta + orienta sobre exames.</p>
+                    <div class="use-case-result"><i class="fas fa-chart-line"></i> Resultado: 68% de conversão + 40% trazem exames prontos</div>
+                </div>
+
+                <div class="use-case-card">
+                    <span class="use-case-icon"><i class="fas fa-spa"></i></span>
+                    <h3>Dermatologia Estética</h3>
+                    <p><strong>Cenário:</strong> Lead interessado em procedimento estético</p>
+                    <p><strong>Nexus:</strong> Qualifica interesse (botox, preenchimento, laser), explica procedimento, mostra antes/depois quando possível e agenda avaliação gratuita.</p>
+                    <div class="use-case-result"><i class="fas fa-chart-line"></i> Resultado: 81% de conversão em avaliações agendadas</div>
+                </div>
+
+                <div class="use-case-card">
+                    <span class="use-case-icon"><i class="fas fa-baby"></i></span>
+                    <h3>Pediatria</h3>
+                    <p><strong>Cenário:</strong> Mãe procurando pediatra para bebê</p>
+                    <p><strong>Nexus:</strong> Tranquiliza sobre a experiência do médico, explica abordagem humanizada, confirma se é primeira consulta ou retorno e agenda considerando horários escolares.</p>
+                    <div class="use-case-result"><i class="fas fa-chart-line"></i> Resultado: 76% de conversão + alta taxa de retorno</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Section -->
+    <section id="roi" class="roi-section">
+        <div class="container">
+            <div class="roi-content">
+                <div class="section-header">
+                    <span class="section-tag" style="background: rgba(255, 255, 255, 0.2); color: white;">ROI Comprovado</span>
+                    <h2 style="color: white;">Números que falam por si</h2>
+                    <p style="color: rgba(255, 255, 255, 0.9);">Resultados médios de clínicas que implementaram o Nexus AI</p>
+                </div>
+
+                <div class="roi-grid">
+                    <div class="roi-card">
+                        <span class="roi-value">+245%</span>
+                        <span class="roi-label">Aumento em conversões</span>
+                        <p class="roi-description">De visitantes para agendamentos confirmados</p>
+                    </div>
+
+                    <div class="roi-card">
+                        <span class="roi-value">-60%</span>
+                        <span class="roi-label">Redução em no-shows</span>
+                        <p class="roi-description">Com lembretes automáticos e confirmações</p>
+                    </div>
+
+                    <div class="roi-card">
+                        <span class="roi-value">R$ 47k</span>
+                        <span class="roi-label">Receita adicional/mês</span>
+                        <p class="roi-description">Média de aumento de faturamento</p>
+                    </div>
+
+                    <div class="roi-card">
+                        <span class="roi-value">24/7</span>
+                        <span class="roi-label">Disponibilidade total</span>
+                        <p class="roi-description">Sem custo de hora extra ou plantão</p>
+                    </div>
+
+                    <div class="roi-card">
+                        <span class="roi-value">89%</span>
+                        <span class="roi-label">Taxa de satisfação</span>
+                        <p class="roi-description">Pacientes adoram o atendimento rápido</p>
+                    </div>
+
+                    <div class="roi-card">
+                        <span class="roi-value">3.2x</span>
+                        <span class="roi-label">Retorno do investimento</span>
+                        <p class="roi-description">ROI médio em 90 dias</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Comparativo</span>
+                <h2>Secretária sobrecarregada vs. IA focada em converter</h2>
+                <p>Veja a diferença quando você separa atendimento presencial de conversão online</p>
+            </div>
+
+            <div class="comparison-table">
+                <div class="comparison-header">
+                    <div></div>
+                    <div>Secretária (fazendo tudo)</div>
+                    <div>Secretária + Nexus AI</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-label">Execução do script de vendas</div>
+                    <div class="comparison-value bad">Inconsistente (varia 30-80%)</div>
+                    <div class="comparison-value good">100% sempre</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-label">Qualidade do atendimento presencial</div>
+                    <div class="comparison-value bad">Comprometida (dividindo atenção)</div>
+                    <div class="comparison-value good">Excelente (foco total)</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-label">Tempo de resposta online</div>
+                    <div class="comparison-value bad">15 min a 8 horas</div>
+                    <div class="comparison-value good">30 segundos</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-label">Taxa de conversão de leads</div>
+                    <div class="comparison-value bad">20-35%</div>
+                    <div class="comparison-value good">65-80%</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-label">Disponibilidade para converter</div>
+                    <div class="comparison-value bad">Horário comercial (se não estiver ocupada)</div>
+                    <div class="comparison-value good">24/7 sempre disponível</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-label">Tratamento de objeções</div>
+                    <div class="comparison-value bad">Varia com cansaço e humor</div>
+                    <div class="comparison-value good">Sempre empático e persuasivo</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-label">Integração com agenda</div>
+                    <div class="comparison-value bad">Manual (trocar mensagens)</div>
+                    <div class="comparison-value good">Automática em tempo real</div>
+                </div>
+
+                <div class="comparison-row">
+                    <div class="comparison-label">Custo adicional</div>
+                    <div class="comparison-value bad">Contratar mais uma pessoa (R$ 3-5k)</div>
+                    <div class="comparison-value good">R$ 497/mês</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Casos de Sucesso</span>
+                <h2>O que nossos clientes dizem</h2>
+                <p>Clínicas reais, resultados reais</p>
+            </div>
+
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Minha secretária estava enlouquecendo tentando atender presencial e WhatsApp ao mesmo tempo. Agora ela foca 100% em quem está aqui, e o Nexus converte melhor do que ela conseguia. Nossa conversão subiu de 28% para 71%."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MC</div>
+                        <div class="author-info">
+                            <h4>Dra. Maria Clara Oliveira</h4>
+                            <p>Clínica Cardio Saúde - São Paulo</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-stats">
+                        <div class="stat-mini">
+                            <span class="stat-mini-number">71%</span>
+                            <span class="stat-mini-label">Taxa de conversão</span>
+                        </div>
+                        <div class="stat-mini">
+                            <span class="stat-mini-number">+154%</span>
+                            <span class="stat-mini-label">Mais agendamentos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"O mais impressionante é a consistência. Antes cada lead recebia um atendimento diferente dependendo do humor da equipe. Agora 100% dos leads passam pelo script completo, com todas as objeções tratadas."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RS</div>
+                        <div class="author-info">
+                            <h4>Dr. Roberto Silva</h4>
+                            <p>Centro Médico Integrado - Brasília</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-stats">
+                        <div class="stat-mini">
+                            <span class="stat-mini-number">100%</span>
+                            <span class="stat-mini-label">Script executado</span>
+                        </div>
+                        <div class="stat-mini">
+                            <span class="stat-mini-number">3x</span>
+                            <span class="stat-mini-label">Mais conversões</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Minha equipe agradeceu! Não precisam mais ficar divididas entre recepção e WhatsApp. O atendimento presencial melhorou muito, e as conversões online triplicaram. Win-win total."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AF</div>
+                        <div class="author-info">
+                            <h4>Dra. Ana Flávia Costa</h4>
+                            <p>Clínica Ortopédica Prime - Rio de Janeiro</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-stats">
+                        <div class="stat-mini">
+                            <span class="stat-mini-number">3x</span>
+                            <span class="stat-mini-label">Conversões online</span>
+                        </div>
+                        <div class="stat-mini">
+                            <span class="stat-mini-number">+95%</span>
+                            <span class="stat-mini-label">Satisfação da equipe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Lead que chega 21h é convertido na mesma hora. Antes a secretária só via no dia seguinte e a gente já tinha perdido. Agora capturamos 100% dos leads, não importa o horário."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PC</div>
+                        <div class="author-info">
+                            <h4>Dr. Paulo Cardoso</h4>
+                            <p>Dermatologia Avançada - Belo Horizonte</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-stats">
+                        <div class="stat-mini">
+                            <span class="stat-mini-number">0%</span>
+                            <span class="stat-mini-label">Leads perdidos</span>
+                        </div>
+                        <div class="stat-mini">
+                            <span class="stat-mini-number">24/7</span>
+                            <span class="stat-mini-label">Conversão ativa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integrations Section -->
+    <section class="integrations-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Integrações</span>
+                <h2>Funciona com os sistemas que você já usa</h2>
+                <p>Integração nativa com as principais plataformas de gestão de clínicas</p>
+            </div>
+
+            <div class="integrations-grid">
+                <div class="integration-badge">
+                    <div class="integration-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <span>Google Calendar</span>
+                </div>
+                <div class="integration-badge">
+                    <div class="integration-icon"><i class="fas fa-hospital"></i></div>
+                    <span>Clinux</span>
+                </div>
+                <div class="integration-badge">
+                    <div class="integration-icon"><i class="fas fa-stethoscope"></i></div>
+                    <span>iClinic</span>
+                </div>
+                <div class="integration-badge">
+                    <div class="integration-icon"><i class="fas fa-pills"></i></div>
+                    <span>MedPlus</span>
+                </div>
+                <div class="integration-badge">
+                    <div class="integration-icon"><i class="fas fa-chart-bar"></i></div>
+                    <span>Doctoralia</span>
+                </div>
+                <div class="integration-badge">
+                    <div class="integration-icon"><i class="fab fa-whatsapp"></i></div>
+                    <span>WhatsApp Business API</span>
+                </div>
+                <div class="integration-badge">
+                    <div class="integration-icon"><i class="fas fa-envelope"></i></div>
+                    <span>Email Marketing</span>
+                </div>
+                <div class="integration-badge">
+                    <div class="integration-icon"><i class="fas fa-plug"></i></div>
+                    <span>Zapier / Make</span>
+                </div>
+            </div>
+
+            <div class="integration-note">
+                <p><strong>Seu sistema não está aqui?</strong> Sem problema! Trabalhamos com APIs customizadas e nossa equipe técnica implementa a integração em poucos dias.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Perguntas Frequentes</span>
+                <h2>Dúvidas comuns</h2>
+                <p>Tudo o que você precisa saber sobre o Nexus AI</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Minha secretária vai perder o emprego?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer" style="display: none;">
+                        Não! O Nexus AI não substitui sua secretária — libera ela para fazer o trabalho presencial com excelência. Enquanto a IA cuida da conversão online (WhatsApp, site, redes sociais), sua equipe pode focar 100% em quem está na recepção, proporcionando uma experiência premium. Isso na verdade valoriza o trabalho dela!
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Como o Nexus aprende o script da minha clínica?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer" style="display: none;">
+                        Durante a implementação, nossa equipe trabalha com você para entender seu processo de vendas, principais objeções, diferenciais da clínica e o tom de voz que você quer. Treinamos o Nexus com essas informações e você pode revisar e ajustar o script quantas vezes quiser até ficar perfeito.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Como funciona a integração com minha agenda?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer" style="display: none;">
+                        O Nexus AI se integra nativamente com os principais sistemas de gestão de clínicas (Clinux, iClinic, MedPlus, etc.) e também com Google Calendar. A integração é feita em até 24h pela nossa equipe técnica, sem necessidade de conhecimento técnico da sua parte. O Nexus consulta horários disponíveis em tempo real e agenda automaticamente.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        E se o lead fizer uma pergunta que a IA não sabe responder?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer" style="display: none;">
+                        O Nexus AI é treinado especificamente para sua clínica, com todas as informações sobre procedimentos, convênios, valores e políticas. Ele sabe tratar mais de 95% das perguntas comuns. Caso encontre uma situação muito específica fora do escopo, ele informa o lead que vai consultar a equipe e já agenda um retorno ou transfere para alguém da sua equipe.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Quanto tempo leva para implementar?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer" style="display: none;">
+                        A implementação completa leva de 3 a 5 dias úteis. Isso inclui: personalização do script com informações da sua clínica, integração com sistemas, treinamento do Nexus com suas objeções e diferenciais, e período de testes. Você começa a ver resultados já na primeira semana.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Qual o custo mensal?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer" style="display: none;">
+                        O plano completo custa R$ 497/mês, sem taxa de setup ou custos ocultos. Isso inclui conversões ilimitadas, todas as integrações, suporte técnico prioritário, ajustes no script sempre que precisar e atualizações constantes da IA. Oferecemos 14 dias de teste grátis para você comprovar os resultados.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Como fica a questão da LGPD e privacidade dos dados?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer" style="display: none;">
+                        Somos 100% conformes com a LGPD. Todos os dados são criptografados, armazenados em servidores brasileiros certificados e nunca são compartilhados com terceiros. Fornecemos termo de consentimento personalizado e toda documentação necessária para compliance.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Posso cancelar quando quiser?
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer" style="display: none;">
+                        Sim, sem multas ou burocracias. Trabalhamos com mensalidade sem fidelidade. Se não estiver satisfeito, pode cancelar a qualquer momento. Confiamos tanto no resultado que 98% dos nossos clientes renovam mensalmente.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-final">
+        <div class="container">
+            <div class="cta-final-content">
+                <h2>Enquanto você lê isso, suas concorrentes estão convertendo</h2>
+                <p>Cada minuto sem o Nexus AI é dinheiro deixado na mesa. Leads que chegam agora estão sendo respondidos em 30 segundos por clínicas que já automatizaram. Não deixe sua clínica ficar para trás.</p>
+                <div class="cta-urgency">
+                    <span class="urgency-badge"><i class="fas fa-fire"></i> Últimas 5 vagas do mês com implementação prioritária</span>
+                </div>
+                <div class="cta-final-buttons">
+                    <a href="https://thaispaivacaliandra-chatbot-demo-nexus.hf.space/" target="_blank" class="cta-button cta-button-large">Começar Teste Grátis Agora</a>
+                    <a href="mailto:contato@nexusai.com.br" class="cta-button cta-button-secondary cta-button-large">Falar com Especialista</a>
+                </div>
+                <div class="cta-guarantee">
+                    <p><i class="fas fa-check"></i> Sem cartão de crédito • <i class="fas fa-check"></i> Implementação em 5 dias • <i class="fas fa-check"></i> Cancele quando quiser</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Nexus AI - Desenvolvido por <a href="https://thaispaivacaliandra.netlify.app" target="_blank">Thais Paiva</a></p>
+            <p>Atendimento inteligente para clínicas médicas</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="demonstracao.html">Demonstração</a>
+                <a href="resultados.html">Resultados</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('.faq-icon i');
+                const isOpen = answer.style.display === 'block';
+
+                // Close all other FAQs
+                document.querySelectorAll('.faq-answer').forEach(a => {
+                    a.style.display = 'none';
+                });
+                document.querySelectorAll('.faq-icon i').forEach(i => {
+                    i.className = 'fas fa-plus';
+                });
+
+                // Toggle current FAQ
+                if (!isOpen) {
+                    answer.style.display = 'block';
+                    icon.className = 'fas fa-minus';
+                }
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.problem-card, .roi-card, .testimonial-card, .timeline-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstração - Nexus AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .demo-section {
+            padding: 80px 0;
+            background: var(--bg-white);
+        }
+
+        .demo-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .demo-iframe-wrapper {
+            background: white;
+            border-radius: 24px;
+            padding: 20px;
+            box-shadow: 0 30px 80px rgba(139, 92, 246, 0.2);
+            border: 1px solid var(--border);
+            margin-top: 40px;
+        }
+
+        .demo-iframe-header {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .demo-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .demo-dot:nth-child(1) { background: #EF4444; }
+        .demo-dot:nth-child(2) { background: #FBBF24; }
+        .demo-dot:nth-child(3) { background: #10B981; }
+
+        .demo-iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 12px;
+        }
+
+        .demo-instructions {
+            margin-top: 60px;
+        }
+
+        .instruction-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .instruction-card {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .instruction-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #FF6B35, #8B5CF6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 24px;
+        }
+
+        .instruction-card h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .instruction-card p {
+            color: var(--text-gray);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .test-scenarios {
+            padding: 80px 0;
+            background: var(--bg-light);
+        }
+
+        .scenarios-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .scenario-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .scenario-card:hover {
+            border-color: var(--accent-purple);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(139, 92, 246, 0.12);
+        }
+
+        .scenario-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .scenario-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(139, 92, 246, 0.1));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: var(--accent-purple);
+        }
+
+        .scenario-card h3 {
+            font-size: 18px;
+            color: var(--text-dark);
+        }
+
+        .scenario-card p {
+            color: var(--text-gray);
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .scenario-example {
+            background: var(--bg-light);
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 14px;
+            color: var(--text-dark);
+            font-style: italic;
+        }
+
+        .scenario-example strong {
+            color: var(--accent-purple);
+            font-style: normal;
+        }
+
+        @media (max-width: 968px) {
+            .instruction-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .scenarios-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .demo-iframe {
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img src="imgs/logo_hero.svg" alt="Nexus AI Logo">
+                </a>
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="demonstracao.html" class="active">Demonstração</a>
+                    <a href="resultados.html">Resultados</a>
+                </nav>
+                <a href="demonstracao.html" class="cta-button cta-button-small">Testar Grátis</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1><i class="fas fa-comments"></i> Teste o Nexus AI Agora</h1>
+                <p>Experimente na prática como o Nexus AI conversa com seus leads. Faça perguntas, simule objeções e veja como a IA conduz a conversa até o agendamento.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo-section">
+        <div class="container">
+            <div class="demo-container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-play-circle"></i> Demo Interativa</span>
+                    <h2>Converse com o Nexus AI</h2>
+                    <p>Esta é uma demonstração real do nosso agente de IA. Ele está configurado para simular o atendimento de uma clínica de cardiologia.</p>
+                </div>
+
+                <div class="demo-iframe-wrapper">
+                    <div class="demo-iframe-header">
+                        <div class="demo-dot"></div>
+                        <div class="demo-dot"></div>
+                        <div class="demo-dot"></div>
+                    </div>
+                    <iframe
+                        src="https://thaispaivacaliandra-chatbot-demo-nexus.hf.space/"
+                        class="demo-iframe"
+                        title="Demo Nexus AI"
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+                <div class="demo-instructions">
+                    <div class="instruction-grid">
+                        <div class="instruction-card">
+                            <div class="instruction-icon"><i class="fas fa-comment-dots"></i></div>
+                            <h3>1. Inicie a conversa</h3>
+                            <p>Comece perguntando sobre consultas, preços, convênios ou horários disponíveis.</p>
+                        </div>
+
+                        <div class="instruction-card">
+                            <div class="instruction-icon"><i class="fas fa-question-circle"></i></div>
+                            <h3>2. Faça objeções</h3>
+                            <p>Teste dizendo "está caro", "preciso pensar" ou "não conheço o médico" e veja como a IA responde.</p>
+                        </div>
+
+                        <div class="instruction-card">
+                            <div class="instruction-icon"><i class="fas fa-calendar-check"></i></div>
+                            <h3>3. Simule um agendamento</h3>
+                            <p>Siga a conversa até o final e veja como o Nexus conduz ao agendamento de forma natural.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Test Scenarios -->
+    <section class="test-scenarios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-lightbulb"></i> Sugestões</span>
+                <h2>O que testar na demonstração</h2>
+                <p>Aqui estão alguns cenários para você experimentar e ver o Nexus AI em ação</p>
+            </div>
+
+            <div class="scenarios-grid">
+                <div class="scenario-card">
+                    <div class="scenario-header">
+                        <div class="scenario-icon"><i class="fas fa-dollar-sign"></i></div>
+                        <h3>Objeção de Preço</h3>
+                    </div>
+                    <p>Veja como a IA trata objeções sobre valores e destaca o custo-benefício da consulta.</p>
+                    <div class="scenario-example">
+                        <strong>Teste:</strong> "Achei caro, tem desconto?" ou "Não tenho esse valor agora"
+                    </div>
+                </div>
+
+                <div class="scenario-card">
+                    <div class="scenario-header">
+                        <div class="scenario-icon"><i class="fas fa-id-card"></i></div>
+                        <h3>Convênios</h3>
+                    </div>
+                    <p>Pergunte sobre planos de saúde e veja como a IA identifica e confirma cobertura.</p>
+                    <div class="scenario-example">
+                        <strong>Teste:</strong> "Vocês aceitam Unimed?" ou "Quais convênios vocês atendem?"
+                    </div>
+                </div>
+
+                <div class="scenario-card">
+                    <div class="scenario-header">
+                        <div class="scenario-icon"><i class="fas fa-user-md"></i></div>
+                        <h3>Sobre o Médico</h3>
+                    </div>
+                    <p>Pergunte sobre a experiência e qualificações do profissional.</p>
+                    <div class="scenario-example">
+                        <strong>Teste:</strong> "O médico é bom?" ou "Qual a formação dele?"
+                    </div>
+                </div>
+
+                <div class="scenario-card">
+                    <div class="scenario-header">
+                        <div class="scenario-icon"><i class="fas fa-clock"></i></div>
+                        <h3>Horários Disponíveis</h3>
+                    </div>
+                    <p>Veja como a IA oferece opções de horários e adapta às suas preferências.</p>
+                    <div class="scenario-example">
+                        <strong>Teste:</strong> "Tem horário à noite?" ou "Qual o primeiro horário disponível?"
+                    </div>
+                </div>
+
+                <div class="scenario-card">
+                    <div class="scenario-header">
+                        <div class="scenario-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h3>Localização</h3>
+                    </div>
+                    <p>Pergunte sobre endereço, estacionamento e como chegar na clínica.</p>
+                    <div class="scenario-example">
+                        <strong>Teste:</strong> "Onde fica a clínica?" ou "Tem estacionamento?"
+                    </div>
+                </div>
+
+                <div class="scenario-card">
+                    <div class="scenario-header">
+                        <div class="scenario-icon"><i class="fas fa-hourglass-half"></i></div>
+                        <h3>Hesitação</h3>
+                    </div>
+                    <p>Simule indecisão e veja como a IA mantém o engajamento sem ser invasiva.</p>
+                    <div class="scenario-example">
+                        <strong>Teste:</strong> "Vou pensar e retorno" ou "Preciso consultar minha esposa"
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-final">
+        <div class="container">
+            <div class="cta-final-content">
+                <h2>Gostou do que viu?</h2>
+                <p>Imagine esse nível de atendimento funcionando 24/7 para sua clínica, personalizado com suas informações, valores e diferenciais.</p>
+                <div class="cta-final-buttons">
+                    <a href="mailto:contato@nexusai.com.br" class="cta-button cta-button-white"><i class="fas fa-envelope"></i> Solicitar Demonstração Personalizada</a>
+                    <a href="resultados.html" class="cta-button cta-button-outline"><i class="fas fa-chart-line"></i> Ver Resultados de Clientes</a>
+                </div>
+                <div class="cta-guarantee">
+                    <p><i class="fas fa-check"></i> 14 dias grátis • <i class="fas fa-check"></i> Implementação em 5 dias • <i class="fas fa-check"></i> Sem compromisso</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Nexus AI - Desenvolvido por <a href="https://thaispaivacaliandra.netlify.app" target="_blank">Thais Paiva</a></p>
+            <p>Atendimento inteligente para clínicas médicas</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="demonstracao.html">Demonstração</a>
+                <a href="resultados.html">Resultados</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
